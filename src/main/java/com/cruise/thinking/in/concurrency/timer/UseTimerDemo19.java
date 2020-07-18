@@ -35,7 +35,24 @@ public class UseTimerDemo19 {
             System.out.println("字符串时间：" + date.toLocaleString() + " 当前时间：" + new Date().toString());
             timer.scheduleAtFixedRate(myTask, date, 5000);
         } catch (ParseException e) {
-            e.printStackTrace();
+            e.printStackTrace();/**
+             *
+             */
         }
     }
 }
+/**
+ * 结束运行了！时间为：Sat Jul 18 15:42:42 CST 2020
+ * 开始运行了！时间为：Sat Jul 18 15:42:42 CST 2020
+ * 结束运行了！时间为：Sat Jul 18 15:42:42 CST 2020
+ * 开始运行了！时间为：Sat Jul 18 15:42:45 CST 2020
+ * 结束运行了！时间为：Sat Jul 18 15:42:45 CST 2020
+ * 开始运行了！时间为：Sat Jul 18 15:42:50 CST 2020
+ * 结束运行了！时间为：Sat Jul 18 15:42:50 CST 2020
+ * 开始运行了！时间为：Sat Jul 18 15:42:55 CST 2020
+ * 结束运行了！时间为：Sat Jul 18 15:42:55 CST 2020
+ * 开始运行了！时间为：Sat Jul 18 15:43:00 CST 2020
+ * 结束运行了！时间为：Sat Jul 18 15:43:00 CST 2020
+ * 开始运行了！时间为：Sat Jul 18 15:43:05 CST 2020
+ * 结束运行了！时间为：Sat Jul 18 15:43:05 CST 2020
+ */

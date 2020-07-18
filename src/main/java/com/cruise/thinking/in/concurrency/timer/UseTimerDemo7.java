@@ -34,9 +34,12 @@ public class UseTimerDemo7 {
             Date date = format.parse(dateStr);
             System.out.println("字符串时间：" + date.toLocaleString() + " 当前时间：" + new Date().toString());
             // 指定时间早于当前时间立即执行，每隔 5s 循环执行
-            timer.schedule(myTask, date,5000);
+            timer.schedule(myTask, date, 5000);
         } catch (ParseException e) {
             e.printStackTrace();
         }
     }
 }
+/**
+ *
+ */

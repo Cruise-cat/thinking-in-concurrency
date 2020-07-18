@@ -11,7 +11,7 @@ import java.util.TimerTask;
  *
  * @author Cruise
  * @version 1.0
- * @see Timer#schedule(TimerTask, long) 
+ * @see Timer#schedule(TimerTask, long)
  * @since 2020/7/18
  */
 public class UseTimerDemo12 {
@@ -31,3 +31,7 @@ public class UseTimerDemo12 {
         timer.schedule(myTask, 6000);
     }
 }
+/**
+ * 当前时间：Sat Jul 18 14:59:27 CST 2020
+ * 运行了！时间为：Sat Jul 18 14:59:33 CST 2020
+ */

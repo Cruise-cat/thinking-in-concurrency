@@ -23,7 +23,7 @@ public class UseTimerDemo14 {
         @Override
         public void run() {
             try {
-                System.out.println("开始运行了！时间为：" + new Date());
+                System.out.println("开始运行-了！时间为：" + new Date());
                 Thread.sleep(1000);
                 System.out.println("结束运行了！时间为：" + new Date());
                 counter++;
@@ -50,3 +50,16 @@ public class UseTimerDemo14 {
         }
     }
 }
+/**
+ * 字符串时间：2020-7-18 15:11:30 当前时间：Sat Jul 18 15:11:23 CST 2020
+ * 开始运行了！时间为：Sat Jul 18 15:11:30 CST 2020
+ * 结束运行了！时间为：Sat Jul 18 15:11:31 CST 2020
+ * 开始运行了！时间为：Sat Jul 18 15:11:33 CST 2020
+ * 结束运行了！时间为：Sat Jul 18 15:11:34 CST 2020
+ * 开始运行了！时间为：Sat Jul 18 15:11:36 CST 2020
+ * 结束运行了！时间为：Sat Jul 18 15:11:37 CST 2020
+ * 开始运行了！时间为：Sat Jul 18 15:11:39 CST 2020
+ * 结束运行了！时间为：Sat Jul 18 15:11:40 CST 2020
+ * 开始运行了！时间为：Sat Jul 18 15:11:42 CST 2020
+ * 结束运行了！时间为：Sat Jul 18 15:11:43 CST 2020
+ */

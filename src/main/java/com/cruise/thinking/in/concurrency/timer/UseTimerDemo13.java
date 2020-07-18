@@ -26,6 +26,13 @@ public class UseTimerDemo13 {
         MyTask myTask = new MyTask();
         Timer timer = new Timer();
         System.out.println("当前时间：" + new Date().toString());
-        timer.schedule(myTask,2000, 6000);
+        timer.schedule(myTask, 2000, 6000);
     }
 }
+/**
+ * 当前时间：Sat Jul 18 15:02:15 CST 2020
+ * 运行了！时间为：Sat Jul 18 15:02:17 CST 2020
+ * 运行了！时间为：Sat Jul 18 15:02:23 CST 2020
+ * 运行了！时间为：Sat Jul 18 15:02:29 CST 2020
+ * 运行了！时间为：Sat Jul 18 15:02:35 CST 2020
+ */

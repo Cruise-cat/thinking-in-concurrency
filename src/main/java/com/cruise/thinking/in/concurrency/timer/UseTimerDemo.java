@@ -41,3 +41,7 @@ public class UseTimerDemo {
         }
     }
 }
+/**
+ * 字符串时间：2020-7-18 12:31:50 当前时间：Sat Jul 18 12:31:37 CST 2020
+ * 运行了！时间为：Sat Jul 18 12:31:50 CST 2020
+ */
