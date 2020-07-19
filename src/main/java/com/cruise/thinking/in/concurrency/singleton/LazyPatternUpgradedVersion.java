@@ -1,7 +1,5 @@
 package com.cruise.thinking.in.concurrency.singleton;
 
-import com.sun.javaws.Launcher;
-
 import java.util.stream.Stream;
 
 /**
