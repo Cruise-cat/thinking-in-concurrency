@@ -12,27 +12,36 @@ import com.cruise.thinking.in.concurrency.annotation.ThreadUnsafe;
 @ThreadUnsafe
 public class VolatileThreadUnsafe {
 
-    public static void main(String[] args) {
-        MyService[] threads = new MyService[10];
-        for (int i = 0; i < 10; i++) {
-            threads[i] = new MyService();
-        }
+    private static volatile int count = 0;
 
+    public static void increase() {
+        count++;
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        for (int i = 0; i < 10; i++) {
+            test();
+            Thread.sleep(1000);
+            count = 0;
+        }
+    }
+
+    public static void test() throws InterruptedException {
+        VolatileThreadUnsafe unsafe = new VolatileThreadUnsafe();
+        Thread[] threads = new Thread[10];
+        for (int i = 0; i < 10; i++) {
+            threads[i] = new Thread(() -> {
+                for (int j = 0; j < 100; j++) {
+                    increase();
+                }
+            });
+        }
         for (int i = 0; i < 10; i++) {
             threads[i].start();
         }
+        Thread.sleep(2000);
+        System.out.println(unsafe.count);
     }
 
-    static class MyService extends Thread {
-        private volatile static int count = 0;
-
-        @Override
-        public void run() {
-            for (int i = 0; i < 100; i++) {
-                count++;
-            }
-            System.out.println(count);
-        }
-    }
 
 }
