@@ -13,7 +13,7 @@ import java.util.stream.Stream;
  */
 public class LazyPatternUpgradedVersion {
 
-    private static LazyPatternUpgradedVersion instance;
+    private volatile static LazyPatternUpgradedVersion instance;
 
     private LazyPatternUpgradedVersion() {
 
@@ -25,6 +25,7 @@ public class LazyPatternUpgradedVersion {
      * <li>2.初始化对象</li>
      * <li>3.将对象地址赋给 instance 引用</li>
      * 其中第 2 条和第 3 条可能顺序颠倒，这样导致某个线程可能会拿到属性还没有初始化的对象造成 {@link NullPointerException} 等
+     * 解决这个问题就需要在 instance 上添加 volatile 修饰，前提是 JDK 5 以后的版本
      *
      * @return
      */
